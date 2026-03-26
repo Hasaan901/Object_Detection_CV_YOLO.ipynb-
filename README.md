@@ -1,60 +1,68 @@
-🚗 Vehicle Detection using YOLOv5 in Google Colab
-📝 Project Description
-This project demonstrates vehicle detection in images using the YOLOv5 object detection model within a Google Colab environment. It loads a pre-trained YOLOv5 model (yolov5s) from the Ultralytics repository and performs inference on a user-specified image. It filters detections to only show vehicles (cars, trucks, buses, motorbikes) and draws bounding boxes around them with confidence scores.
+# YOLO Vehicle Detection 🚗💨
 
-📁 Project Structure
-bash
-Copy
-Edit
-CV_YOLO.ipynb           # Main Colab notebook for vehicle detection
-vehicle_detection_result.jpg  # Output image with bounding boxes (generated during runtime)
-⚙️ Installation (handled in Colab)
-python
-Copy
-Edit
-!pip install torch torchvision torchaudio
-!pip install opencv-python
-!pip install matplotlib
-!pip install yolov5
-All necessary packages are automatically installed via pip in the Colab notebook.
+A high-performance vehicle detection system using **YOLOv10x** for images and **YOLOv8n** for videos. This project is capable of detecting cars, trucks, buses, and motorbikes with high accuracy and speed.
 
-🚀 Features
-Load a YOLOv5 model (yolov5s) pre-trained on the COCO dataset.
+## ✨ Features
+- **Precise Image Detection**: Uses YOLOv10x for superior detection quality in static images.
+- **Fast Video Detection**: Uses YOLOv8n to maintain a high frame rate during video processing.
+- **Easy-to-use CLI**: A standalone script for quick detection runs.
+- **Jupyter Notebook Support**: Robust notebook for interactive analysis.
+- **Automated Output Management**: Results are automatically saved to an `outputs/` directory.
 
-Detect objects in a custom image uploaded by the user.
+## 🛠 Prerequisites
+- **Python 3.8+**
+- **Hardware**: GPU (recommended for faster processing) or CPU.
 
-Filter and display only vehicle-related classes:
+## 🚀 Installation
 
-car, truck, bus, motorbike
+1.  **Clone the repository**:
+    ```bash
+    git clone https://github.com/omerfarooq223/YOLO_Vehicle_Detection.git
+    cd YOLO_Vehicle_Detection
+    ```
 
-Annotate the image with bounding boxes and confidence scores.
+2.  **Install dependencies**:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-Save and download the annotated result image.
+## 📖 Usage
 
-🖼️ Usage Instructions
-Upload your image to the Colab environment.
+### Using the Python Script (`detect.py`)
+Run detection from the terminal:
 
-Update the image_path in the notebook with your image file.
+- **Image Detection**:
+  ```bash
+  python detect.py --source sample_data/sample_1.jpeg --type image
+  ```
 
-Run all cells to:
+- **Video Detection**:
+  ```bash
+  python detect.py --source path/to/your/video.mp4 --type video
+  ```
 
-Load the model
+*Results will be saved in the `outputs/` directory.*
 
-Detect vehicles
+### Using the Jupyter Notebook (`detect_vehicles.ipynb`)
+For an interactive experience, open the notebook:
+```bash
+jupyter notebook detect_vehicles.ipynb
+```
+Follow the steps in the notebook to run detections on your data.
 
-Display and save the annotated result
+## 📂 Project Structure
+- `detect.py`: Standalone CLI tool for vehicle detection.
+- `detect_vehicles.ipynb`: Interactive Jupyter notebook.
+- `requirements.txt`: Python package dependencies.
+- `sample_data/`: Contains sample images for testing.
+- `outputs/`: (Created upon running) Stores processed results.
 
-Download the final output
+## 📊 Sample Detections
+You can find test images in the `sample_data/` folder:
+- `sample_1.jpeg`
+- `sample_2.jpeg`
+- `sample_3.jpeg`
+- `sample_4.jpeg`
 
-🔍 Example Output
-The image displays all detected vehicles with green boxes and labels (e.g., car 0.85).
-
-Output is saved as vehicle_detection_result.jpg.
-
-🧠 Model Info
-Model: YOLOv5s
-
-Source: Ultralytics YOLOv5
-
-Dataset: COCO (Common Objects in Context)
-
+---
+*Developed by Hasaan Ahmad.*
