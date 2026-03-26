@@ -17,7 +17,7 @@ A high-performance vehicle detection system using **YOLOv10x** for images and **
 
 1.  **Clone the repository**:
     ```bash
-    git clone https://github.com/omerfarooq223/YOLO_Vehicle_Detection.git
+    git clone https://github.com/hasaan901/YOLO_Vehicle_Detection.git
     cd YOLO_Vehicle_Detection
     ```
 
